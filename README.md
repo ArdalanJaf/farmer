@@ -1,4 +1,4 @@
-# 🦍 Trading Bot — Modular Screener, Backtester & Execution Engine
+# 🚜 Farmer - Trading Bot — Modular Screener, Backtester & Execution Engine
 
 ## 🎯 Project Overview
 

@@ -1,0 +1,5 @@
+# 🗂️ Database layer
+# One-time DB schema & index creation
+# All DB CRUD operations (insert/query/update)
+# TypedDicts / Pydantic models for trade, config, candidate records
+# Your actual SQLite database file

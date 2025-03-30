@@ -1,5 +1,5 @@
-from database.crud import create_screener_config, update_screener_config
-from database.schemas import ScreenerConfigCreate, ScreenerConfigUpdate
+from database.crud.screener_configs import create_screener_config, update_screener_config
+from database.schemas.screener_configs import ScreenerConfigCreate, ScreenerConfigUpdate
 from screener.schemas.universal_config import UniversalScreenerConfig
 
 def test_create_screener_config_success(db):

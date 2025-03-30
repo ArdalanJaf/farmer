@@ -23,7 +23,7 @@ class DatabaseConfig:
         )
     
 # Instantiate config
-DB = DatabaseConfig()
+db = DatabaseConfig()
     
 # Define schema directory
 SCHEMA_DIR = BASE_DIR / 'schema'

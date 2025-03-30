@@ -1,11 +1,11 @@
-from sqlalchemy import Column, Integer, DateTime, JSON, ForeignKey, String, UniqueConstraint
+from sqlalchemy import Column, Integer, DateTime, JSON, String, UniqueConstraint
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 from database.db import Base
 
 class ScreenerConfig(Base):
     __tablename__ = "screener_configs"
-    __table_args__ = (UniqueConstraint("name", "version", name="uq_name_version"))
+    __table_args__ = ((UniqueConstraint("name", "version", name="uq_name_version")),)
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False)

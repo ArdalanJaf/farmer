@@ -3,7 +3,7 @@ from database.models.screener_configs import ScreenerConfig as ScreenerConfigMod
 from database.models.screener_results import ScreenerResult
 from screener.schemas.universal_config import UniversalScreenerConfig
 from screener.adapters.yahoo import map_to_yahoo
-from database.crud.screener_configs import get_screener_config
+from database.crud.screener_configs import get_screener_config_by_id
 from screener.enums import ScreenerSource
 
 # Adapter map for multi-source support
@@ -14,7 +14,7 @@ ADAPTER_MAP = {
 
 def run_screener(db: Session, config_id: int, source: ScreenerSource):
     # 1. Load config
-    db_config: ScreenerConfigModel = get_screener_config(db, config_id)
+    db_config: ScreenerConfigModel = get_screener_config_by_id(db, config_id)
     if not db_config:
         raise ValueError(f"ScreenerConfig with id {config_id} not found")
 

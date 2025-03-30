@@ -17,3 +17,24 @@ def db():
         yield db
     finally:
         db.close()
+        
+@pytest.fixture(scope="module")
+def test_engine():
+    """Create an in-memory SQLite database engine."""
+    engine = create_engine("sqlite:///:memory:")
+    Base.metadata.create_all(engine)
+    return engine
+
+@pytest.fixture(scope="function")
+def test_session(test_engine):
+    """Create a new session for each test."""
+    connection = test_engine.connect()
+    transaction = connection.begin()
+    Session = sessionmaker(bind=connection)
+    session = Session()
+
+    yield session
+
+    session.close()
+    transaction.rollback()
+    connection.close()

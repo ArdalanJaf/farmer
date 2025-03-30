@@ -7,8 +7,8 @@ class ScreenerResultBase(BaseModel):
     config_snapshot: Dict
     results_json: Dict
 
-    class Config:
-        orm_mode = True
+    class ConfigDict:
+        from_attributes = True
 
 class ScreenerResultCreate(ScreenerResultBase):
     pass

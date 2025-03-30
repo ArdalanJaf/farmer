@@ -8,8 +8,8 @@ class ScreenerConfigBase(BaseModel):
     config_json: Dict
     description: Optional[str] = None
 
-    class Config:
-        orm_mode = True  # Allow Pydantic to work with SQLAlchemy models
+    class ConfigDict:
+        from_attributes = True  # Allow Pydantic to work with SQLAlchemy models
 
 class ScreenerConfigCreate(ScreenerConfigBase):
     pass

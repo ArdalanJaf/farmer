@@ -29,12 +29,12 @@ The project is:
 
 - **Python 3.10+**
 - **SQLite** (initial DB)
-- **Yahoo Finance API (via yfinance)** → Phase 1
-- **IBKR API** (via `ib_insync`) → Phase 3
-- **pytest** for testing
-- **Pandas, NumPy** for backtesting & analysis
-- **Next.js + FastAPI (optional UI)** → Phase 6
-- **VPS/Cloud Server deployment** → Phase 5
+- **Yahoo Finance API (via yfinance)**
+- **IBKR API** (via `ib_insync`)
+- **pytest**
+- **Pandas, NumPy**
+- **VPS/Cloud Server deployment**
+- **Next.js + FastAPI (optional UI)**
 
 ---
 

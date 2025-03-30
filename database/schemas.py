@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from typing import Optional, Dict
 
-# Define the schema for ScreenerConfig
+# ScreenerConfig CRUD-ops DTOs
 class ScreenerConfigBase(BaseModel):
     name: str
     version: int
@@ -17,7 +17,7 @@ class ScreenerConfigCreate(ScreenerConfigBase):
 class ScreenerConfigUpdate(ScreenerConfigBase):
     pass
 
-# Define the schema for ScreenerResult
+# ScreenerResult CRUD-ops DTOs
 class ScreenerResultBase(BaseModel):
     config_id: int
     config_snapshot: Dict
@@ -31,3 +31,4 @@ class ScreenerResultCreate(ScreenerResultBase):
 
 class ScreenerResultUpdate(ScreenerResultBase):
     pass
+
